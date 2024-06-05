@@ -1,0 +1,204 @@
+@import "../sass/mixin";
+
+body {
+    @include bodyBackground;
+}
+
+/* NAV */
+
+.bgNav {
+    background-color: #181818;
+}
+
+/* FORM */
+
+.favMsg {
+    @include favMsg;
+}
+
+.bgContainer {
+    background-color: #181818;
+}
+
+.custom_title {
+    @include customTitle;
+}
+
+.div_width {
+    width: 60%;
+}
+
+.custom-input {
+    padding: 10px;
+}
+
+.failed_field {
+    @include failedField;
+}
+
+.failed_cfField {
+    @include failedField;
+}
+
+.success_field {
+    @include successField;
+}
+
+.custom-focus:focus {
+    @include customFocus;
+}
+
+.custom-btn1 {
+    background-color: rgb(250, 5, 109);
+
+    &:hover {
+        background-color: rgb(165, 17, 78)
+    }
+}
+
+
+.custom-btn2 {
+    background-color: #6c757d;
+
+    &:hover {
+        background-color: rgb(250, 5, 109)
+    }
+}
+
+.custom-btn3 {
+    background-color: #212529;
+
+    &:hover {
+        background-color: rgb(250, 5, 109)
+    }
+}
+
+.popover {
+    @include popover;
+}
+
+.popover .popover-header {
+    @include popover;
+}
+
+.popover .popover-body {
+    @include popoverBody;
+}
+
+
+::placeholder {
+    color: #6c757d !important;
+}
+
+
+/* MEDIA XS */
+
+@media only screen and (min-width: 0) and (max-width: 320px) {
+    .custom_title {
+        @include mediaTitleXS;
+    }
+
+    .custom-input {
+        width: 160%;
+    }
+
+    ::placeholder {
+        font-size: 14px !important;
+    }
+
+    .input-group {
+        width: 160%;
+    }
+
+    .custom-btn2 {
+        font-size: 12px;
+    }
+
+    .custom-btn1 {
+        @include mediaBtn1XS;
+    }
+}
+
+/* SCALING FROM XS -> S */
+
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    .custom_title {
+        @include mediaTitleXS
+    }
+
+    .custom-input {
+        width: 160%;
+    }
+
+    ::placeholder {
+        font-size: 14px !important;
+    }
+
+    .input-group {
+        width: 160%;
+    }
+
+    .custom-btn2 {
+        font-size: 12px;
+    }
+
+    .custom-btn1 {
+        @include mediaBtn1XS;
+    }
+}
+
+/* MEDIA S */
+
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+    .custom_title {
+        @include mediaTitleS;
+    }
+
+    .custom-input {
+        width: 160%;
+    }
+
+    ::placeholder {
+        font-size: 14px !important;
+    }
+
+    .input-group {
+        width: 160%;
+    }
+
+    .custom-btn2 {
+        font-size: 14px;
+    }
+
+    .custom-btn1 {
+        @include mediaBtn1S;
+    }
+}
+
+/* SCALING FROM M -> L */
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .custom_title {
+        @include mediaTitleM;
+    }
+
+    .custom-input {
+        width: 160%;
+    }
+
+    ::placeholder {
+        font-size: 14px !important;
+    }
+
+    .input-group {
+        width: 160%;
+    }
+
+    .custom-btn2 {
+        font-size: 15px;
+    }
+
+    .custom-btn1 {
+        @include mediaBtn1M;
+    }
+}

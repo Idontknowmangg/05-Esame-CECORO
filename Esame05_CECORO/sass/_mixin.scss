@@ -1,0 +1,77 @@
+@mixin bodyBackground {
+    background-image: url('../img/bg-netflix.jpg');
+    background-size: 120%;
+}
+
+@mixin favMsg {
+    color: #6c757d;
+    font-size: 14px;
+    transition: ease 0.2s;
+}
+
+@mixin customTitle {
+    padding-top: 30px;
+    font-size: 55px;
+}
+
+@mixin failedField {
+    font-size: 14px;
+    color: red;
+    transition: ease 0.2s;
+}
+
+@mixin successField {
+    font-size: 14px;
+    color: green;
+    transition: ease 0.2s;
+}
+
+@mixin customFocus {
+    border-color: red !important;
+    box-shadow: 0 0 5px 0.25rem rgba(250, 5, 109, 0.4) !important;
+}
+
+@mixin popover {
+    background-color: #212529;
+    color: #fff;
+}
+
+@mixin popoverBody {
+    background-color: #212529;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+
+@mixin mediaTitleXS {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+@mixin mediaBtn1XS {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+
+@mixin mediaTitleS {
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+@mixin mediaBtn1S {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+
+@mixin mediaTitleM {
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+@mixin mediaBtn1M {
+    margin-left: 10px;
+    font-size: 15px;
+}

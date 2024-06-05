@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+    <!-- CDN proveniente da Bootstrap 5.3, tutto il suo pacchetto per funzionare: classi, stili, JS etc -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- File CSS -->
+    <link href="css/stylemin.css" type="text/css" rel="stylesheet">
+    <title>Pagina di registrazione</title>
+
+    <!-- CDN proveniente da Bootstrap 5.3, pacchetto popperJS per un elemento di nome PopOver -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <!-- CDN proveniente da Bootstrap 5.3, pacchetto di Bootstrap di JS per funzionare la parte di JS, bisogna prima includere il main file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <!-- Aggiunta della libreria Font-Awesome per caricare l'icona dell'occhio per la password e della carta del codice fiscale -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Inizio Header -->
+    <header class="bgNav p-1">
+        <!-- Inizio navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-dark navbar-dark ">
+            <!-- Inizio container -->
+            <div class="container-fluid">
+                <!-- Inizio logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="img/logoCODE_nobg.png" width="160">
+                </a>
+                <!-- Fine logo -->
+                <!-- Inizio pulsante ad hamburger che compare quando lo schermo è inferiore a 992px -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Fine pulsante -->
+                <!-- Div principale che tiene tutto la navbar che, se inferiore a 992px cambia modalità di visualizzazione -->
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <!-- Inizio lista -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Elemento della lista -->
+                        <li class="nav-item px-3 px-lg-0">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Pagina iniziale</a>
+                        </li>
+                    </ul>
+                    <!-- Fine lista -->
+                    <!-- Inizio pulsante di Accedi -->
+                    <form class="d-flex" role="search">
+                        <button class="btn custom-btn1 text-white mx-3 mx-lg-0" type="submit">Accedi</button>
+                    </form>
+                    <!-- Fine pulsante -->
+                </div>
+                <!-- Fine div -->
+            </div>
+            <!-- Fine container -->
+        </nav>
+        <!-- Fine navbar -->
+    </header>
+    <!-- Fine Header -->
+
+    <!-- #################################################################################################################### -->
+
+    <!-- Inizio Container 1 -->
+    <div class="container d-flex justify-content-center mt-lg-5">
+        <!-- Inizio bordi -->
+        <div class="border w-75 border-top-0 border-bottom-0 my-3 my-lg-0 px-2 px-lg-auto">
+
+            <!-- Inizio Container 2 -->
+            <div class="container d-flex justify-content-end bg-black bg-opacity-50 text-white mt-lg-3">
+                <!-- Div che ha il titolo -->
+                <div class="row custom_title fw-bold me-1 mb-3 me-lg-5 mb-lg-0">Inserisci i tuoi
+                    dati</div>
+            </div>
+            <!-- Fine Container 2 -->
+
+            <!-- Inizio Container 3 -->
+            <div class="container bg-black bg-opacity-50 text-white mb-lg-5 px-lg-5 py-4 py-lg-5">
+                <!-- FORM -->
+                <form class="needs-validation" id="myForm" novalidate action="success.html">
+                    <!-- Input Nome -->
+                    <div class="mx-lg-5 div_width mb-3">
+                        <label for="nomeInput" class="form-label m-auto">Nome *</label>
+                        <div class="favMsg mt-lg-3 mb-lg-2">Inserisci cortesemente il tuo nome</div>
+                        <input type="text" class="form-control custom-input custom-focus bg-dark text-white border-0"
+                            id="nomeInput" placeholder="Inserisci il tuo nome" required data-bs-toggle="popover"
+                            data-bs-trigger="focus" title="Informazione sul nome"
+                            data-bs-content="Il nome è una parte fondamentale del discorso di una lingua, indica una persona, oggetto, concetti, idee e tanto altro. In questo campo dovresti inserire il tuo nome"
+                            minlength="4" maxlength="40">
+
+                        <div class="failed_field mt-lg-3"></div>
+                        <div class="success_field mt-lg-3"></div>
+                    </div>
+
+                    <!-- Input Cognome -->
+                    <div class="mx-lg-5 div_width mb-3">
+                        <label for="cognomeInput" class="form-label m-auto">Cognome *</label>
+                        <div class="favMsg mt-lg-3 mb-lg-2">Inserisci cortesemente il tuo cognome</div>
+                        <input type="text" class="form-control custom-input custom-focus bg-dark text-white border-0"
+                            id="cognomeInput" placeholder="Inserisci il tuo cognome" required data-bs-toggle="popover"
+                            data-bs-trigger="focus" title="Informazione sul cognome"
+                            data-bs-content="Il cognome è il nome che indica a quale famiglia appartiene una persona. In questo campo dovresti inserire il tuo cognome"
+                            minlength="4" maxlength="40">
+                        <div class="failed_field mt-lg-3"></div>
+                        <div class="success_field mt-lg-3"></div>
+                    </div>
+
+                    <!-- Input Sesso (Select) -->
+                    <div class="mx-lg-5 div_width mb-3">
+                        <label for="sessoSelect" class="form-label m-auto">Sesso *</label>
+                        <div class="favMsg mt-lg-3 mb-lg-2">Inserisci cortesemente il tuo genere</div>
+                        <select class="form-select custom-input bg-dark text-white border-0 custom-focus custom_color"
+                            id="sessoSelect" required data-bs-toggle="popover" data-bs-trigger="focus"
+                            title="Informazione sul sesso o genere"
+                            data-bs-content="Spesso si confonde con il genere però generalmente si riferisce ad un costrutto sociale che una società assegna alle persone in base al loro sesso. In questo campo non dovrai inserire ma cliccare tra uno di questi generi, Maschio o Femmina">
+                            <option value="" selected disabled>Seleziona il sesso</option>
+                            <option value="1">Maschio</option>
+                            <option value="2">Femmina</option>
+                            <option value="3">Preferisco non dirlo</option>
+                        </select>
+                        <div class="failed_field mt-lg-3"></div>
+                        <div class="success_field mt-lg-3"></div>
+                        <!-- Divisore 1 -->
+                        <hr class="mx-lg-5 my-lg-4">
+                    </div>
+
+                    <!-- Input Data di Nascita -->
+                    <div class="mx-lg-5 div_width mb-3">
+                        <label for="dateBirthInput" class="form-label m-auto">Data di nascita *</label>
+                        <div class="favMsg mt-lg-3 mb-lg-2">Inserisci cortesemente la tua data di nascita</div>
+                        <input type="date" class="form-control custom-input custom-focus bg-dark text-white border-0"
+                            id="dateBirthInput" required data-bs-toggle="popover" data-bs-trigger="focus"
+                            title="Informazione sulla data di nascita"
+                            data-bs-content="La data di nascita è un informazione fondamentale che indica il giorno, mese e anno in cui sei nato o nata. In questo campo non dovrai inserire ma cliccare o scorrere tra mesi e anno e infine il giorno">
+                        <div class="failed_field mt-lg-3"></div>
+                        <div class="success_field mt-lg-3"></div>
+                    </div>
+
+                    <!-- Input Nazione (Select) -->
+                    <div class="mx-lg-5 div_width mb-3">
+                        <label for="nazioneInput" class="form-label m-auto">Nazione *</label>
+                        <div class="favMsg mt-lg-3 mb-lg-2">Inserisci cortesemente la tua nazione</div>
+                        <select class="form-select custom-input bg-dark text-white border-0 custom-focus custom_color"
+                            id="nazioneInput" required data-bs-toggle="popover" data-bs-trigger="focus"
+                            title="Informazione sulla nazione"
+                            data-bs-content="La nazione è una comunità di individui che condividono alcune delle caratteristiche come il luogo geografico, la lingua, la religione e la cultura. In questo campo non dovresti inserire ma selezionare un nome di quale nazione provieni">
+                            <option value="" selected disabled>Seleziona una nazione</option>
+                            <option value="1">Italia</option>
+                            <option value="2">Irlanda</option>
+                            <option value="3">Stati Uniti d'America</option>
+                            <option value="4">Messico</option>
+                            <option value="5">Brasile</option>
+                        </select>
+                        <div class="failed_field mt-lg-3"></div>
+                        <div class="success_field mt-lg-3"></div>
+                    </div>
+
+                    <!-- Input Città -->
+                    <div class="mx-lg-5 div_width mb-3">
+                        <label for="cityInput" class="form-label m-auto">Città *</label>
+                        <div class="favMsg mt-lg-3 mb-lg-2">Inserisci cortesemente la tua città</div>
+                        <input type="text" class="form-control custom-input custom-focus bg-dark text-white border-0"
+                            id="cityInput" placeholder="Inserisci la tua città" required data-bs-toggle="popover"
+                            data-bs-trigger="focus" title="Informazione sulla città"
+                            data-bs-content="La città è un insediamento umano che ha dimensioni significative rispetto ad altri paesi, come cittadine e paesini. Sono generalmente caratterizzate da una densità di popolazione più alta ed è dovuto ad un maggior numero di abitazioni, edifici, servizi e molto altro. In questo campo dovresti inserire da quale città provieni, come Roma, Firenze, Milano e altre"
+                            minlength="4" maxlength="30">
+                        <div class="failed_field mt-lg-3"></div>
+                        <div class="success_field mt-lg-3"></div>
+                    </div>
+
+                    <!-- Input Provincia -->
+                    <div class="mx-lg-5 div_width mb-3">
+                        <label for="provinceInput" class="form-label m-auto">Provincia *</label>
+                        <div class="favMsg mt-lg-3 mb-lg-2">Inserisci cortesemente la tua provincia</div>
+                        <input type="text" class="form-control custom-input custom-focus bg-dark text-white border-0"
+                            id="provinceInput" placeholder="Inserisci la tua provincia" required
+                            data-bs-toggle="popover" data-bs-trigger="focus" title="Informazione sulla provincia"
+                            data-bs-content="E' un ente locale territoriale di area vasta che, include molti comuni. Organizzano e gestiscono a livello locale in un'area più grande rispetto ad un singolo comune. In questo campo dovresti inserire la provincia, se non conosce o non ricorda, basta che possieda della tessera codice fiscale dove ci sono le due lettere sul luogo di nascita, come (CE), (RM) e molti altri"
+                            minlength="4" maxlength="20">
+                        <div class="failed_field mt-lg-3"></div>
+                        <div class="success_field mt-lg-3"></div>
+                        <!-- Divisore 2 -->
+                        <hr class="mx-lg-5 my-lg-4">
+                    </div>
+
+                    <!-- Campo codice fiscale con icona della carta -->
+                    <div class="mx-lg-5 div_width mb-3 needs-validation" novalidate>
+                        <label for="codFiscaleInput" class="form-label m-auto">Codice fiscale *</label>
+                        <div class="favMsg mt-lg-3 mb-lg-2">Inserisci cortesemente il tuo codice fiscale</div>
+                        <div class="input-group">
+                            <input type="text"
+                                class="form-control custom-input custom-focus bg-dark text-white border-0 focus-ring focus-ring-custom "
+                                id="codFiscaleInput" placeholder="Inserisci il tuo codice fiscale" required
+                                data-bs-toggle="popover" data-bs-trigger="focus" title="Informazione sul codice fiscale"
+                                data-bs-content="E' un codice alfanumerico composto da 16 caratteri che serve ad identificare in modo univoco le persone fisiche e altri soggetti diversi dalle persone fisiche nei loro rapporti con gli enti e le amministrazioni pubbliche dallo Stato Italiano."
+                                minlength="1" maxlength="16">
+                            <button type="button" class="btn btn-dark custom-btn3 border-0" data-bs-toggle="tooltip"
+                                data-bs-placement="right"
+                                data-bs-title="Formato da rispettare: [6 Lettere], [2 Numeri], [1 Lettera], [2 Numeri], [1 Lettera], [3 Numeri], [1 Lettera]. Cliccare al di fuori di questo box per chiudere">
+                                <i class="fas fa-id-card"></i>
+                            </button>
+                        </div>
+                        <div class="failed_field"></div>
+                        <div class="failed_cfField mt-lg-3"></div>
+                        <div class="success_field mt-lg-3"></div>
+                    </div>
+
+
+                    <!-- Input Cittadinanza -->
+                    <div class="mx-lg-5 div_width mb-3">
+                        <label for="cittadinanzaInput" class="form-label m-auto">Cittadinanza *</label>
+                        <div class="favMsg mt-lg-3 mb-lg-2">Inserisci cortesemente la tua cittadinanza</div>
+                        <input type="text" class="form-control custom-input custom-focus bg-dark text-white border-0"
+                            id="cittadinanzaInput" placeholder="Inserisci la tua cittadinanza" required
+                            data-bs-toggle="popover" data-bs-trigger="focus" title="Informazione sulla cittadinanza"
+                            data-bs-content="La cittadinanza è un concetto che indica il rapporto tra lo Stato e un individuo. Quindi una condizione giuridica e sociale a chi appartiene a uno Stato, dalla quale deriva il riconoscimento dei diritti civili, sociali, economici e politici e altrettanti doveri. In questo campo dovresti semplicemente inserire da quale Paese di nascita provieni, come ad esempio Italia, Spagna, Inghilterra, Germania, etc"
+                            minlength="4" maxlength="30" autocomplete="username">
+                        <div class="failed_field mt-lg-3"></div>
+                        <div class="success_field mt-lg-3"></div>
+                        <!-- Divisore 3 -->
+                        <hr class="mx-lg-5 my-lg-4">
+                    </div>
+
+                    <!-- Input Password -->
+                    <div class="mx-lg-5 div_width mb-3">
+                        <label for="pswInput" class="form-label m-auto">Password *</label>
+                        <div class="favMsg mt-lg-3 mb-lg-2">Inserisci cortesemente la tua password</div>
+                        <div class="input-group">
+                            <input type="password"
+                                class="form-control custom-input custom-focus bg-dark text-white border-0" id="pswInput"
+                                placeholder="Inserisci la tua password" required minlength="4" maxlength="30"
+                                autocomplete="new-password" data-bs-toggle="popover" data-bs-trigger="focus"
+                                title="Informazione sulla password"
+                                data-bs-content="La password è un informazione fondamentale dove collega a pieno a quella dell'email. La password è spesso una chiave segreta che solamente il mittente sa. Il nostro consiglio per questo campo è quello di inventare una password complessa e che ricordi solamente tu, ricordati anche di salvare da qualche parte che ricordi solamente tu">
+                            <!-- Icona dell'occhio -->
+                            <button type="button" class="btn btn-dark custom-btn3 border-0" data-bs-toggle="tooltip"
+                                id="togglePassword" data-bs-placement="right"
+                                data-bs-title="Formato da rispettare: Almeno 8 caratteri, una lettera maiuscola, una lettera minuscola, un numero e un carattere speciale (#'@?!)">
+                                <i class="fas fa-eye"></i> <!-- Icona dell'occhio -->
+                            </button>
+                        </div>
+                        <div class="failed_field mt-lg-3"></div>
+                        <div class="success_field mt-lg-3"></div>
+                    </div>
+
+
+                    <!-- Inizio Container 4 -->
+                    <div class="container d-flex justify-content-start mt-lg-4 ms-lg-5">
+                        <a href="#" title="Clicca per tornare indietro"
+                            class="btn custom-btn2 text-white p-auto me-lg-4 px-lg-5">Torna
+                            indietro</a>
+                        <button type="submit" class="btn custom-btn1 text-white p-auto">Conferma e continua</button>
+                    </div>
+                    <!-- Fine Container 4 -->
+                </form>
+            </div>
+            <!-- Fine Container 3 -->
+        </div>
+        <!-- Fine Bordi -->
+    </div>
+    <!-- Fine Container 1 -->
+
+    <!-- #################################################################################################################### -->
+
+    <!-- FOOTER -->
+    <div class="container-fluid bg-dark text-secondary text-justified mt-5 mt-lg-5 p-5 p-lg-5">
+        <div class="my_row2 row mt-2 mb-5 mb-lg-0">
+            <!-- Prima colonna -->
+            <div class="col-4 my_col2">
+                <ul class="my_list list-group">
+                    <!-- Primo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere tutte le FAQ">F.A.Q.</a></li>
+                    <!-- Secondo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere la pagina basata su Privacy">Privacy</a></li>
+                    <!-- Terzo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere la pagina basata sulla informativa sui cookies">Informativa sui
+                            cookies</a></li>
+                    <!-- Quarto elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere i tuoi crediti">Crediti</a></li>
+                </ul>
+            </div>
+            <!-- Seconda colonna -->
+            <div class="col-4 my_col2">
+                <ul class="my_list list-group">
+                    <!-- Primo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere tutte le FAQ">F.A.Q.</a></li>
+                    <!-- Secondo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere il Link1">Link1</a></li>
+                    <!-- Terzo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere il Link2">Link2</a></li>
+                </ul>
+            </div>
+            <!-- Terza colonna -->
+            <div class="col-4 my_col2">
+                <ul class="my_list list-group">
+                    <!-- Primo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere tutte le FAQ">F.A.Q.</a></li>
+                    <!-- Secondo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere il Link1">Link1</a></li>
+                    <!-- Terzo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere il Link2">Link2</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Ultimo testo per indicare i diritti di copyright -->
+        <div class="col-12 mt-lg-5 text-center">
+            <p>Copyright &copy 2024 - <strong style="color: #fd0167;">CO</strong>DE</p>
+            <p>Crediti per l'immagine del logo - Accademia <strong style="color: #fd0167;">CO</strong>DE</p>
+        </div>
+    </div>
+    <!-- Fine FOOTER -->
+
+    <!-- Tutti gli script locali -->
+    <script src="ts/mainScript.js"></script>
+    <script src="ts/inputScript.js"></script>
+    <script src="ts/inputError.js"></script>
+</body>
+<!-- Fine pagina -->
+
+</html>

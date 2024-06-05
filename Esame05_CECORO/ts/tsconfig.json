@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["ES2023", "DOM"],
+    "module": "ES6",
+    "moduleResolution": "node",
+    "noUnusedParameters": true
+  }
+}

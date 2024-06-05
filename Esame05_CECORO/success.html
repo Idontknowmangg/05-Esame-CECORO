@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+    <!-- CDN proveniente da Bootstrap 5.3, tutto il suo pacchetto per funzionare: classi, stili, JS etc -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- File CSS -->
+    <link href="css/stylemin.css" type="text/css" rel="stylesheet">
+    <title>Pagina di registrazione</title>
+
+    <!-- CDN proveniente da Bootstrap 5.3, pacchetto popperJS per un elemento di nome PopOver -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <!-- CDN proveniente da Bootstrap 5.3, pacchetto di Bootstrap di JS per funzionare la parte di JS, bisogna prima includere il main file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <!-- Aggiunta della libreria Font-Awesome per caricare l'icona dell'occhio per la password e della carta del codice fiscale -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Inizio Header -->
+    <header class="bgNav p-1">
+        <!-- Inizio navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-dark navbar-dark ">
+            <!-- Inizio container -->
+            <div class="container-fluid">
+                <!-- Inizio logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logoCODE_nobg.png" width="160">
+                </a>
+                <!-- Fine logo -->
+                <!-- Inizio pulsante ad hamburger che compare quando lo schermo è inferiore a 992px -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Fine pulsante -->
+                <!-- Div principale che tiene tutto la navbar che, se inferiore a 992px cambia modalità di visualizzazione -->
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <!-- Inizio lista -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Elemento della lista -->
+                        <li class="nav-item px-3 px-lg-0">
+                            <a class="nav-link active text-white" aria-current="page" href="index.html">Pagina
+                                iniziale</a>
+                        </li>
+                    </ul>
+                    <!-- Fine lista -->
+                    <!-- Inizio pulsante di Accedi -->
+                    <form class="d-flex" role="search">
+                        <button class="btn custom-btn1 text-white mx-3 mx-lg-0" type="submit">Accedi</button>
+                    </form>
+                    <!-- Fine pulsante -->
+                </div>
+                <!-- Fine div -->
+            </div>
+            <!-- Fine container -->
+        </nav>
+        <!-- Fine navbar -->
+    </header>
+    <!-- Fine Header -->
+
+    <!-- #################################################################################################################### -->
+
+    <!-- Inizio Container 1 -->
+    <div class="container d-flex justify-content-center mt-lg-5">
+        <!-- Inizio bordi -->
+        <div class="border w-75 border-top-0 border-bottom-0 px-2 px-lg-auto">
+
+            <!-- Inizio Container 2 -->
+            <div class="container d-flex justify-content-center bg-black bg-opacity-50 text-white mt-lg-3">
+                <!-- Div che ha il titolo -->
+                <div class="row custom_title fw-bold me-1 mb-3 me-lg-5 mb-lg-0">Hai compilato con successo!</div>
+            </div>
+            <!-- Fine Container 2 -->
+
+            <!-- Inizio Container 3 -->
+            <div class="container bg-black bg-opacity-50 text-white mb-lg-5 px-lg-5 py-lg-5">
+
+            </div>
+            <!-- Fine Container 3 -->
+        </div>
+        <!-- Fine Bordi -->
+    </div>
+    <!-- Fine Container 1 -->
+
+    <!-- #################################################################################################################### -->
+
+    <!-- FOOTER -->
+    <div class="container-fluid bg-dark text-secondary text-justified mt-5 mt-lg-5 p-5 p-lg-5">
+        <div class="my_row2 row mt-2 mb-5 mb-lg-0">
+            <!-- Prima colonna -->
+            <div class="col-4 my_col2">
+                <ul class="my_list list-group">
+                    <!-- Primo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere tutte le FAQ">F.A.Q.</a></li>
+                    <!-- Secondo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere la pagina basata su Privacy">Privacy</a></li>
+                    <!-- Terzo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere la pagina basata sulla informativa sui cookies">Informativa sui
+                            cookies</a></li>
+                    <!-- Quarto elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere i tuoi crediti">Crediti</a></li>
+                </ul>
+            </div>
+            <!-- Seconda colonna -->
+            <div class="col-4 my_col2">
+                <ul class="my_list list-group">
+                    <!-- Primo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere tutte le FAQ">F.A.Q.</a></li>
+                    <!-- Secondo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere il Link1">Link1</a></li>
+                    <!-- Terzo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere il Link2">Link2</a></li>
+                </ul>
+            </div>
+            <!-- Terza colonna -->
+            <div class="col-4 my_col2">
+                <ul class="my_list list-group">
+                    <!-- Primo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere tutte le FAQ">F.A.Q.</a></li>
+                    <!-- Secondo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere il Link1">Link1</a></li>
+                    <!-- Terzo elemento -->
+                    <li class="my_list_item list-group-item p-0 border-0 bg-dark text-secondary"><a
+                            class="link-offset-2 link-underline link-underline-opacity-0 text-secondary" href="#"
+                            title="Clicca qui per vedere il Link2">Link2</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Ultimo testo per indicare i diritti di copyright -->
+        <div class="col-12 mt-lg-5 text-center">
+            <p>Copyright &copy 2024 - <strong style="color: #fd0167;">CO</strong>DE</p>
+        </div>
+    </div>
+    <!-- Fine FOOTER -->
+</body>
+<!-- Fine pagina -->
+
+</html>
